@@ -28,9 +28,32 @@ def convert_grade_to_num (letter_grade)
 	end
 	grade
 end
-puts "Enter your grade"
-user_input=gets.chomp
-puts "your grade #{user_input} = #{convert_grade_to_num (user_input)} "
+
+puts "Total number of Subjects = " 
+total_sub=gets.chomp.to_i
+
+sub_counter=1
+total_credit_hr=0
+sum_grade=0
+i=0
+grd=""
+crdt=""
+grdcrdt=0
+
+total_sub.times do
+puts "Grade of Subject: #{sub_counter} = "
+grd[i]=gets.chomp
+puts "Credit Hours of Subject: #{sub_counter} = "
+crdt[i]=gets.chomp
+grdcrdt=convert_grade_to_num(grd[i]).to_f*crdt[i].to_f
+sum_grade+=grdcrdt
+total_credit_hr+=crdt[i].to_f
+sub_counter+=1
+i+=1	
+end
+
+puts "your GPA is = #{sum_grade/total_credit_hr}"
+
 
 
 
