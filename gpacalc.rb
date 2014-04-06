@@ -52,8 +52,9 @@ sub_counter+=1
 i+=1	
 end
 
-puts "your GPA is = #{sum_grade/total_credit_hr}"
-
+puts "=============================================================================="
+puts "                              your GPA is = #{sum_grade/total_credit_hr}"
+puts "=============================================================================="
 
 
 
